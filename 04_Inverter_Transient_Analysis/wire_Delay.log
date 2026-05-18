@@ -1,0 +1,99 @@
+LTspice 24.1.3 for Windows
+Circuit: C:\Users\tanma\OneDrive\Documents\LTspice\MOS\04_Inverter_Transient_Analysis\wire_Delay.net
+Start Time: Mon May 18 18:59:43 2026
+solver = Normal
+Maximum thread count: 12
+tnom = 27
+temp = 27
+method = trap
+Model "my_nmos": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "M1": Length shorter than recommended for a level 1 MOSFET.
+Instance "M1": Width narrower than recommended for a level 1 MOSFET.
+Instance "M3": Length shorter than recommended for a level 1 MOSFET.
+Instance "M3": Width narrower than recommended for a level 1 MOSFET.
+Model "my_pmos": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "M2": Length shorter than recommended for a level 1 MOSFET.
+Instance "M2": Width narrower than recommended for a level 1 MOSFET.
+Instance "M4": Length shorter than recommended for a level 1 MOSFET.
+Instance "M4": Width narrower than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+.step r=100 c=1e-13
+.step r=500 c=1e-13
+.step r=100 c=2e-13
+.step r=500 c=2e-13
+Total elapsed time: 0.473 seconds.
+
+Files loaded:
+C:\Users\tanma\OneDrive\Documents\LTspice\MOS\04_Inverter_Transient_Analysis\wire_Delay.net
+C:\Users\tanma\AppData\Local\LTspice\lib\cmp\standard.mos
+
+
+Measurement: tpHL1
+  step	tpHL1	FROM	TO
+     1	2.72511702015e-10	5.49999999917e-10	8.22511701932e-10
+     2	2.87820376167e-10	5.49999999917e-10	8.37820376084e-10
+     3	5.06519314075e-10	5.49999999917e-10	1.05651931399e-09
+     4	5.36012500756e-10	5.49999999917e-10	1.08601250067e-09
+
+Measurement: tpLH1
+  step	tpLH1	FROM	TO
+     1	2.73178337041e-10	1.06499999995e-08	1.09231783365e-08
+     2	2.8887369665e-10	1.06500000009e-08	1.09388736975e-08
+     3	5.07259831668e-10	1.06499999989e-08	1.11572598306e-08
+     4	5.37628519963e-10	1.06500000002e-08	1.11876285202e-08
+
+Measurement: tpd1
+  step	(tpHL1+tpLH1)/2
+     1	2.72845019528e-10
+     2	2.88347036409e-10
+     3	5.06889572871e-10
+     4	5.3682051036e-10
+
+Measurement: tpHL2
+  step	tpHL2	FROM	TO
+     1	1.0686638276e-10	1.09231783365e-08	1.10300447193e-08
+     2	1.10679289955e-10	1.09388736975e-08	1.10495529875e-08
+     3	1.33122862227e-10	1.11572598306e-08	1.12903826928e-08
+     4	1.38010194527e-10	1.11876285202e-08	1.13256387147e-08
+
+Measurement: tpLH2
+  step	tpLH2	FROM	TO
+     1	1.00710562593e-10	8.22511701932e-10	9.23222264525e-10
+     2	1.04274805171e-10	8.37820376084e-10	9.42095181255e-10
+     3	1.2681009288e-10	1.05651931399e-09	1.18332940687e-09
+     4	1.31466267914e-10	1.08601250067e-09	1.21747876859e-09
+
+Measurement: tpd2
+  step	(tpHL2+tpLH2)/2
+     1	1.03788472676e-10
+     2	1.07477047563e-10
+     3	1.29966477554e-10
+     4	1.34738231221e-10
+
+Measurement: tpdSUM
+  step	(tpd1+tpd2)
+     1	3.76633492204e-10
+     2	3.95824083972e-10
+     3	6.36856050425e-10
+     4	6.7155874158e-10
+
+Measurement: tpHLTotal
+  step	tpHLTotal	FROM	TO
+     1	1.04800447194e-08	5.49999999917e-10	1.10300447193e-08
+     2	1.04995529875e-08	5.49999999917e-10	1.10495529875e-08
+     3	1.07403826929e-08	5.49999999917e-10	1.12903826928e-08
+     4	1.07756387148e-08	5.49999999917e-10	1.13256387147e-08
+
+Measurement: tpLHTotal
+  step	tpLHTotal	FROM	TO
+     1	-9.72677773494e-09	1.06499999995e-08	9.23222264525e-10
+     2	-9.7079048196e-09	1.06500000009e-08	9.42095181255e-10
+     3	-9.46667059205e-09	1.06499999989e-08	1.18332940687e-09
+     4	-9.43252123164e-09	1.06500000002e-08	1.21747876859e-09
+
+Measurement: tpdTotal
+  step	(tpHLTotal+tpLHTotal)/2
+     1	3.76633492204e-10
+     2	3.95824083972e-10
+     3	6.36856050425e-10
+     4	6.7155874158e-10
