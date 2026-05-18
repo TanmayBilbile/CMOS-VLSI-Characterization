@@ -11,7 +11,7 @@ The output characteristic maps the drain current against the drain-to-source vol
 * **Simulation Setup:** $V_{DS}$ swept from 0V to 5V. $V_{GS}$ stepped from 0V to 2V in 0.5V increments.
 * **Key Observation:** The distinct transition from the linear (triode) region to the saturation region is visible as $V_{DS}$ exceeds the overdrive voltage ($V_{GS} - V_{th}$). 
 
-![NMOS Output Curve](nmos_iv_output.png)
+
 
 ---
 
@@ -21,12 +21,12 @@ The transfer characteristic maps the drain current against the gate-to-source vo
 * **Simulation Setup:** $V_{GS}$ swept from 0V to 5V with a fixed $V_{DS}$ of 2V.
 * **Key Observation:** The device begins conducting heavily right at the modeled threshold voltage of $V_{th} = 0.7V$.
 
-![NMOS Transfer Curve](nmos_iv_transfer.png)
+
 
 ### 🔬 Subthreshold Leakage Analysis
 While ideal models assume zero current below $V_{th}$, modern VLSI design must account for subthreshold conduction. By plotting the transfer curve on a logarithmic scale, we can observe the exponential relationship of the leakage current below 0.7V. **This metric is the primary driver of static/leakage power dissipation in idle CMOS circuits.**
 
-![Subthreshold Leakage](nmos_iv_transfer_subthreshold_leakage.png)
+
 
 ---
 
@@ -36,7 +36,7 @@ PMOS devices operate with reversed polarities and rely on hole mobility rather t
 * **Simulation Setup:** $V_{DS}$ swept from 0V to -2V. $V_{GS}$ stepped from 0V to -2V in 0.5V increments.
 * **Key Observation:** The characteristics perfectly mirror the NMOS behavior. Notice that for the same absolute gate voltage, the PMOS drives less current than the NMOS due to lower hole mobility ($\mu_p < \mu_n$). This disparity dictates why standard cells require asymmetric sizing (Beta Ratio) to achieve balanced rise and fall times.
 
-![PMOS Output Curve](pmos_iv.png)
+
 
 ---
 
